@@ -1,5 +1,5 @@
 import React from "react";
-import LinearGradient from 'react-native-linear-gradient';
+
 import styles from "./style";
 import {
   Alert,
@@ -9,8 +9,6 @@ import {
   TextInput,
   TouchableWithoutFeedback,
   View,
-  Image, 
-  ImageBackground
 } from "react-native";
 import { Button, SocialIcon } from "react-native-elements";
 import * as Facebook from "expo-facebook";
@@ -43,31 +41,26 @@ export default function LoginScreen() {
   };
 
   return (
-    <ImageBackground
-    source={{ uri: 'https://shorturl.at/dhtX3' }}
-      style={styles.backgroundImage}
-    >
     <KeyboardAvoidingView style={styles.containerView} behavior="padding">
       <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
         <View style={styles.loginScreenContainer}>
           <View style={styles.loginFormView}>
-          <Image
-            source={{ uri: 'https://shorturl.at/dmKU4' }}
-            style={styles.image}
+            <Text style={styles.logoText}>The</Text><Text style={styles.logoColor}> Doctors Inn</Text>
+            <TextInput
+              placeholder="Username"
+              placeholderColor="#c4c3cb"
+              style={styles.loginFormTextInput}
             />
-            <Text style={styles.logoText1}>WELCOME TO </Text>
-            <Text style={styles.logoText}>The Doctor's Inn</Text>
-            
+            <TextInput
+              placeholder="Password"
+              placeholderColor="#c4c3cb"
+              style={styles.loginFormTextInput}
+              secureTextEntry={true}
+            />
             <Button
               buttonStyle={styles.loginButton}
               onPress={() => onLoginPress()}
-              title="Sign in"
-              color= "blue"
-            />
-            <Button
-              buttonStyle={styles.loginButton}
-              onPress={() => onLoginPress()}
-              title="Register"
+              title="Login"
             />
             <Button
               containerStyle={styles.fbLoginButton}
@@ -75,15 +68,9 @@ export default function LoginScreen() {
               onPress={() => onFbLoginPress()}
               title="Login With Facebook"
             />
-            <Image
-            source={{ uri: 'https://shorturl.at/tzA19' }}
-            style={styles.image2}
-            />
           </View>
         </View>
       </TouchableWithoutFeedback>
     </KeyboardAvoidingView>
-    </ImageBackground>
-
   );
 }
