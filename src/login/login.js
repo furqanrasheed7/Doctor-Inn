@@ -1,5 +1,4 @@
 import React from "react";
-
 import styles from "./style";
 import {
   Alert,
@@ -15,8 +14,10 @@ import * as Facebook from "expo-facebook";
 
 const appId = "1047121222092614";
 
-export default function LoginScreen() {
-  const onLoginPress = () => {};
+export default function LoginScreen({ navigation }) { // Ensure navigation prop is passed
+  const onLoginPress = () => {
+    navigation.navigate('Home'); // Navigate to HomeScreen
+  };
 
   const onFbLoginPress = async () => {
     Alert.alert(
