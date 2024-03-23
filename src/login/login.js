@@ -46,7 +46,7 @@ export default function LoginScreen({ navigation }) { // Ensure navigation prop 
       <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
         <View style={styles.loginScreenContainer}>
           <View style={styles.loginFormView}>
-            <Text style={styles.logoText}>The</Text><Text style={styles.logoColor}> Doctors Inn</Text>
+            <Text style={styles.logoText}>The</Text><Text style={styles.logoColor}> Doctors Inn App</Text>
             <TextInput
               placeholder="Username"
               placeholderColor="#c4c3cb"
