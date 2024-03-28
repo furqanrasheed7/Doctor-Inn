@@ -5,7 +5,7 @@ import ForDevOnly from './src/ForDevOnly/ForDevOnly'; // Adjust the path as nece
 import FindClinic from './src/FindClinic/FindClinic'; // Adjust the path as necessary
 import Signup from './src/Signup/Signup'; // Adjust the path as necessary
 import Settings from './src/Settings/Settings'; // Adjust the path as necessary
-import Login from './src/Login/Login'; // Adjust the path as necessary
+import Login from './src/LoginPage/LoginPage'; // Adjust the path as necessary
 import IntroPage from './src/IntroPage/IntroPage'; // Adjust the path as necessary
 import Home from './src/Home/Home';
 import BookAppointment from './src/BookAppointment/BookAppointment';
