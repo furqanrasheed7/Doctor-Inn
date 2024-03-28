@@ -30,19 +30,34 @@ const styles = StyleSheet.create({
   loginFormView: {
     flex: 1,
   },
+
+  inputicons:{
+    width: 20,
+    height: 20,
+    marginRight: 10,
+  },
+
+
   loginFormTextInput: {
     height: 43,
     fontSize: 14,
-    borderRadius: 5,
+    borderRadius: 15,
     borderWidth: 1,
     borderColor: "#eaeaea",
     backgroundColor: "#fafafa",
     paddingLeft: 10,
     marginTop: 5,
     marginBottom: 5,
+    flex: 1,
+    paddingLeft: 10,
+    alignItems: 'center',
+    borderBottomWidth: 1,
+    borderBottomColor: '#c4c3cb',
+    marginBottom: 10,
   },
+
   loginButton: {
-    backgroundColor: "#3897f1",
+    backgroundColor: "#157D9C",
     borderRadius: 5,
     height: 45,
     marginTop: 10,
