@@ -5,6 +5,7 @@ import {
   Keyboard,
   KeyboardAvoidingView,
   Text,
+  ScrollView,
   TextInput,
   TouchableWithoutFeedback,
   View,
@@ -42,6 +43,7 @@ export default function LoginScreen({ navigation }) { // Ensure navigation prop 
   };
 
   return (
+    <ScrollView>
     <KeyboardAvoidingView style={styles.containerView} behavior="padding">
       <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
         <View style={styles.loginScreenContainer}>
@@ -69,9 +71,12 @@ export default function LoginScreen({ navigation }) { // Ensure navigation prop 
               onPress={() => onFbLoginPress()}
               title="Login With Facebook"
             />
+
           </View>
         </View>
       </TouchableWithoutFeedback>
     </KeyboardAvoidingView>
+    </ScrollView>
   );
-}
+
+};

@@ -13,8 +13,8 @@ const styles = StyleSheet.create({
   logoText: {
     fontSize: 40,
     fontWeight: "800",
-    marginTop: 150,
-    marginBottom: 30,
+    marginTop: 45,
+    marginBottom: 5,
     textAlign: "center",
     color: "#be2f47",
   },
@@ -24,7 +24,7 @@ const styles = StyleSheet.create({
     fontWeight: "800",
     marginBottom: 30,
     textAlign: "center",
-    color: "#337b91"
+    color: "#157D9C"
   },
 
   loginFormView: {
