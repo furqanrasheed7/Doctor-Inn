@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./LoginStyle";
+import styles from "./LoginPageStyle";
 import {
   Alert,
   Keyboard,
