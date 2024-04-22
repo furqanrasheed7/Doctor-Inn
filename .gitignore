@@ -1,0 +1,11 @@
+# Ignore node_modules directory
+FrontEnd/node_modules/
+
+# Ignore .expo directory
+FrontEnd/.expo/
+
+# Ignore npm debug logs
+FrontEnd/npm-debug.log*
+
+# Ignore venv directory (Python virtual environment)
+BackEnd/venv/
