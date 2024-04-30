@@ -15,7 +15,7 @@ import * as Facebook from "expo-facebook";
 
 const appId = "1047121222092614";
 
-export default function LoginScreen({ navigation }) { // Ensure navigation prop is passed
+export default function LoginPage({ navigation }) { // Ensure navigation prop is passed
   const onLoginPress = () => {
     navigation.navigate('Home'); // Navigate to HomeScreen
   };
