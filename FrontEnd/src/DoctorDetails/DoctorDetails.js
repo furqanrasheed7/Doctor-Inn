@@ -2,29 +2,38 @@ import React from 'react';
 import { View, Text, StyleSheet, Image, TouchableOpacity } from 'react-native';
 
 const DoctorDetails = ({ route, navigation }) => {
-  const { doctor } = route.params?.doctor || { doctor: { name: 'Default Name', type: 'Default Type', clinic: 'Default Clinic', location: 'Default Location', description: 'Default Description', profilePicture: require('./template_0.jpg') } };
- // Assuming you have a way to determine these values
- const numberOfPatients = 100; // Example value
- const reviewStars = 4.5; // Example value
-
- return (
-    <View style={styles.container}>
-      <TouchableOpacity onPress={() => navigation.goBack()} style={styles.backButton}>
-        <Text style={styles.backButtonText}>Back</Text>
-      </TouchableOpacity>
-      <Image source={doctor.profilePicture} style={styles.doctorPicture} />
-      <Text style={styles.title}>{doctor.name}</Text>
-      <Text style={styles.subtitle}>{doctor.type}</Text>
-      <Text style={styles.subtitle}>{doctor.clinic}</Text>
-      <Text style={styles.subtitle}>{doctor.location}</Text>
-      <View style={styles.reviewContainer}>
-        <Text style={styles.reviewText}>{reviewStars} stars</Text>
-        <Text style={styles.patientText}>{numberOfPatients} patients</Text>
+   // Check if route.params and route.params.doctor are defined
+   const doctor = route.params?.doctor || {
+      name: 'Default Name',
+      type: 'Default Type',
+      clinic: 'Default Clinic',
+      location: 'Default Location',
+      description: 'Default Description',
+      profilePicture: require('./template_0.jpg')
+   };
+  
+   // Assuming you have a way to determine these values
+   const numberOfPatients = 100; // Example value
+   const reviewStars = 4.5; // Example value
+  
+   return (
+      <View style={styles.container}>
+        <TouchableOpacity onPress={() => navigation.goBack()} style={styles.backButton}>
+          <Text style={styles.backButtonText}>Back</Text>
+        </TouchableOpacity>
+        <Image source={doctor.profilePicture} style={styles.doctorPicture} />
+        <Text style={styles.title}>{doctor.name}</Text>
+        <Text style={styles.subtitle}>{doctor.type}</Text>
+        <Text style={styles.subtitle}>{doctor.clinic}</Text>
+        <Text style={styles.subtitle}>{doctor.location}</Text>
+        <View style={styles.reviewContainer}>
+          <Text style={styles.reviewText}>{reviewStars} stars</Text>
+          <Text style={styles.patientText}>{numberOfPatients} patients</Text>
+        </View>
+        <Text style={styles.description}>{doctor.description}</Text>
       </View>
-      <Text style={styles.description}>{doctor.description}</Text>
-    </View>
- );
-};
+   );
+  };
 
 const styles = StyleSheet.create({
  container: {

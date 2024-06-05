@@ -23,6 +23,7 @@ const ForDevOnly = () => {
       <Button title="Go to Settings" onPress={() => navigation.navigate('Settings')} />
       <Button title="Go to Signup" onPress={() => navigation.navigate('Signup')} />
       <Button title="Go to VideoCallScreen" onPress={() => navigation.navigate('VideoCallScreen')} />
+      <Button title="Go to Sidebar" onPress={() => navigation.navigate('Sidebar')} />
     </View>
  );
 };

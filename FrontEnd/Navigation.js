@@ -18,6 +18,7 @@ import MedicationHistory from './src/MedicationHistory/MedicationHistory';
 import PersonalProfile from './src/PersonalProfile/PersonalProfile';
 import VideoCallScreen from './src/VideoCallScreen/VideoCallScreen';
 import AppointmentLog from './src/AppointmentLog/AppointmenLog';
+import Sidebar from './src/Sidebar/Sidebar';
 
 const Stack = createStackNavigator();
 
@@ -42,6 +43,7 @@ export default function Navigation() {
         <Stack.Screen name="PersonalProfile" component={PersonalProfile} />
         <Stack.Screen name="VideoCallScreen" component={VideoCallScreen} />
         <Stack.Screen name="AppointmentLog" component={AppointmentLog} />
+        <Stack.Screen name="Sidebar" component={Sidebar} />
         
       </Stack.Navigator>
     </NavigationContainer>
