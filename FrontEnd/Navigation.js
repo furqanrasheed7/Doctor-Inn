@@ -1,7 +1,7 @@
 import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-import ForDevOnly from './src/ForDevOnly/ForDevOnly';
+import ForDevOnly from './ForDevOnly/ForDevOnly';
 import FindClinic from './src/FindClinic/FindClinic';
 import Signup from './src/Signup/Signup';
 import Settings from './src/Settings/Settings';
@@ -19,7 +19,11 @@ import PersonalProfile from './src/PersonalProfile/PersonalProfile';
 import VideoCallScreen from './src/VideoCallScreen/VideoCallScreen';
 import AppointmentLog from './src/AppointmentLog/AppointmenLog';
 import Sidebar from './src/Sidebar/Sidebar';
-
+import DoctorsDirectory from './src/DoctorsDirectory/DoctorsDirectory';
+import AppointmentCounter from './doctorsSrc/AppointmentCounter/AppointmentCounter';
+import PatientDetails from './doctorsSrc/PatientDetails/PatientDetails';
+import DoctorChatScreen from './doctorsSrc/DoctorChatScreen/DoctorChatScreen';
+import DoctorProfile from './doctorsSrc/DoctorProfile/DoctorProfile';
 const Stack = createStackNavigator();
 
 export default function Navigation() {
@@ -44,7 +48,13 @@ export default function Navigation() {
         <Stack.Screen name="VideoCallScreen" component={VideoCallScreen} />
         <Stack.Screen name="AppointmentLog" component={AppointmentLog} />
         <Stack.Screen name="Sidebar" component={Sidebar} />
-        
+        <Stack.Screen name='DoctorsDirectory' component={DoctorsDirectory}/>
+        <Stack.Screen name='AppointmentCounter' component={AppointmentCounter}/>
+        <Stack.Screen name='PatientDetails' component={PatientDetails}/>
+        <Stack.Screen name='DoctorChatScreen' component={DoctorChatScreen}/>
+        <Stack.Screen name='DoctorProfile' component={DoctorProfile}/>
+
+
       </Stack.Navigator>
     </NavigationContainer>
  );

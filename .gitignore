@@ -9,4 +9,3 @@ FrontEnd/npm-debug.log*
 
 # Ignore venv directory (Python virtual environment)
 BackEnd/venv/
-node_modules

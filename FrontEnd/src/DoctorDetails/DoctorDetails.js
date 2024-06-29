@@ -2,91 +2,108 @@ import React from 'react';
 import { View, Text, StyleSheet, Image, TouchableOpacity } from 'react-native';
 
 const DoctorDetails = ({ route, navigation }) => {
-   // Check if route.params and route.params.doctor are defined
-   const doctor = route.params?.doctor || {
-      name: 'Default Name',
-      type: 'Default Type',
-      clinic: 'Default Clinic',
-      location: 'Default Location',
-      description: 'Default Description',
-      profilePicture: require('./template_0.jpg')
-   };
-  
-   // Assuming you have a way to determine these values
-   const numberOfPatients = 100; // Example value
-   const reviewStars = 4.5; // Example value
-  
-   return (
-      <View style={styles.container}>
-        <TouchableOpacity onPress={() => navigation.goBack()} style={styles.backButton}>
-          <Text style={styles.backButtonText}>Back</Text>
-        </TouchableOpacity>
-        <Image source={doctor.profilePicture} style={styles.doctorPicture} />
-        <Text style={styles.title}>{doctor.name}</Text>
-        <Text style={styles.subtitle}>{doctor.type}</Text>
-        <Text style={styles.subtitle}>{doctor.clinic}</Text>
-        <Text style={styles.subtitle}>{doctor.location}</Text>
-        <View style={styles.reviewContainer}>
-          <Text style={styles.reviewText}>{reviewStars} stars</Text>
-          <Text style={styles.patientText}>{numberOfPatients} patients</Text>
-        </View>
-        <Text style={styles.description}>{doctor.description}</Text>
-      </View>
-   );
+  const doctor = route.params?.doctor || {
+    name: 'Default Name',
+    type: 'Default Type',
+    clinic: 'Default Clinic',
+    location: 'Default Location',
+    description: 'Default Description',
+    profilePicture: require('./template_0.jpg')
   };
 
+  const numberOfPatients = 100; // Example value
+  const reviewStars = 4.5; // Example value
+
+  return (
+    <View style={styles.container}>
+      <TouchableOpacity onPress={() => navigation.goBack()} style={styles.backButton}>
+        <Text style={styles.backButtonText}>Back</Text>
+      </TouchableOpacity>
+      <Image source={doctor.profilePicture} style={styles.doctorPicture} />
+      <Text style={styles.title}>{doctor.name}</Text>
+      <Text style={styles.subtitle}>{doctor.type}</Text>
+      <Text style={styles.subtitle}>{doctor.clinic}</Text>
+      <Text style={styles.subtitle}>{doctor.location}</Text>
+      <View style={styles.reviewContainer}>
+        <Text style={styles.reviewText}>{reviewStars} stars</Text>
+        <Text style={styles.patientText}>{numberOfPatients} patients</Text>
+      </View>
+      <Text style={styles.description}>{doctor.description}</Text>
+      <TouchableOpacity 
+        style={styles.bookButton} 
+        onPress={() => navigation.navigate('BookAppointment', { doctor })}
+      >
+        <Text style={styles.bookButtonText}>Book Appointment</Text>
+      </TouchableOpacity>
+    </View>
+  );
+};
+
 const styles = StyleSheet.create({
- container: {
+  container: {
     flex: 1,
     padding: 20,
     backgroundColor: '#F5F5F5',
- },
- backButton: {
+  },
+  backButton: {
     position: 'absolute',
     top: 20,
     left: 20,
- },
- backButtonText: {
+  },
+  backButtonText: {
     fontSize: 18,
     color: '#333',
- },
- doctorPicture: {
+  },
+  doctorPicture: {
     width: 100,
     height: 100,
     alignSelf: 'center',
     marginBottom: 20,
     borderRadius: 50, // Assuming the picture is a square
- },
- title: {
+  },
+  title: {
     fontSize: 24,
     fontWeight: 'bold',
     marginBottom: 10,
     textAlign: 'center',
- },
- subtitle: {
+  },
+  subtitle: {
     fontSize: 18,
     marginBottom: 10,
     textAlign: 'center',
- },
- reviewContainer: {
+  },
+  reviewContainer: {
     flexDirection: 'row',
     justifyContent: 'space-around',
     alignItems: 'center',
     marginBottom: 20,
- },
- reviewText: {
+  },
+  reviewText: {
     fontSize: 18,
     color: '#333',
- },
- patientText: {
+  },
+  patientText: {
     fontSize: 18,
     color: '#333',
- },
- description: {
+  },
+  description: {
     fontSize: 16,
     marginBottom: 20,
     textAlign: 'center',
- },
+  },
+  bookButton: {
+    backgroundColor: '#007bff',
+    paddingVertical: 15,
+    borderRadius: 5,
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginTop: 20,
+  },
+  bookButtonText: {
+    color: '#fff',
+    fontSize: 18,
+    fontWeight: 'bold',
+  },
 });
 
 export default DoctorDetails;

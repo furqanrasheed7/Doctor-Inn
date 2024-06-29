@@ -11,7 +11,6 @@ import {
   View,
 } from "react-native";
 import { Button, SocialIcon } from "react-native-elements";
-import * as Facebook from "expo-facebook";
 
 const appId = "1047121222092614";
 
